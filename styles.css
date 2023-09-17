@@ -1,0 +1,111 @@
+* {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --dark-green: hsl(156, 42%, 18%);
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cream);
+}
+.product {
+    margin: 150px auto;
+    width: 775px;
+    height: 550px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-radius: 10px;
+    background-color: var(--white);
+    overflow: hidden;
+}
+.product-img {
+    width: 100%;
+    height: 100%;
+}
+.product-data {
+    padding: 20px 30px;
+}
+.product-description,
+.category-title,
+.old-price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--dark-grayish-blue);
+    font-size: 15px;
+}
+.category-title {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.product-description {
+    line-height: 25px;
+}
+.product-title {
+    font-family: 'Fraunces', serif;
+    color: var(--very-dark-blue);
+    line-height: 42px;
+    font-size: 42px;
+    margin: 30px 0;
+}
+.product-price {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+}
+.actual-price{
+    font-family: 'Fraunces', serif;
+    font-size: 42px;
+    color: var(--dark-cyan);
+    margin: 20px 25px 20px 0;
+}
+.old-price {
+    text-decoration: line-through;
+}
+.buy-btn {
+    width: 100%;
+    padding: 17px 0;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    border-radius: 5px;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    margin: 10px 0 0 0;
+}
+.buy-btn:hover {
+    cursor: pointer;
+    background-color: var(--dark-green);
+}
+footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 13px; 
+    width: 100%;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+@media (max-width: 700px) {
+    .product {
+        margin: 50px auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 370px;
+        height: 800px; 
+    }
+}
